@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Método de eliminación</title>
+
+  <!-- Conectamos el archivo de estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    <h1>Método de eliminación</h1>
+    <p class="subtitulo">Resuelve un sistema de ecuaciones 2x2 y mira el procedimiento paso a paso.</p>
+
+    <!-- Zona donde el usuario escribe las ecuaciones -->
+    <section class="bloque">
+      <h2>Escribe tu sistema</h2>
+
+      <!-- Ecuación 1: a1x + b1y = c1 -->
+      <div class="fila-ecuacion">
+        <input type="number" id="a1" value="2" step="any" aria-label="Coeficiente a1">
+        <span>x +</span>
+        <input type="number" id="b1" value="3" step="any" aria-label="Coeficiente b1">
+        <span>y =</span>
+        <input type="number" id="c1" value="8" step="any" aria-label="Resultado c1">
+      </div>
+
+      <!-- Ecuación 2: a2x + b2y = c2 -->
+      <div class="fila-ecuacion">
+        <input type="number" id="a2" value="4" step="any" aria-label="Coeficiente a2">
+        <span>x +</span>
+        <input type="number" id="b2" value="-1" step="any" aria-label="Coeficiente b2">
+        <span>y =</span>
+        <input type="number" id="c2" value="6" step="any" aria-label="Resultado c2">
+      </div>
+
+      <p class="ayuda">Si un número es negativo, escribe el signo menos. Por ejemplo, 4x - y = 6 se escribe con b2 = -1.</p>
+
+      <!-- Al hacer clic se ejecuta la función resolver() del archivo script.js -->
+      <button onclick="resolver()">Resolver</button>
+    </section>
+
+    <!-- Zona donde JavaScript escribe el procedimiento y la solución -->
+    <section class="bloque">
+      <h2>Procedimiento y solución</h2>
+      <div id="resultado" aria-live="polite">
+        <p class="vacio">Presiona "Resolver" para ver los pasos.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Conectamos el archivo de JavaScript (al final, cuando la página ya cargó) -->
+  <script src="script.js"></script>
+</body>
+</html>
